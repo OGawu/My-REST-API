@@ -1,7 +1,18 @@
 package com.obviousgawu.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "customer_vendor_info")
 public class CloudVendor {
+    @Id
+    @SequenceGenerator(name = "cloudVendor_id_sequence",
+    sequenceName = "cloudVendor_id_sequence",
+    allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+    generator = "cloudVendor_id_sequence")
     private String id;
+
     private String name;
     private String address;
     private String number;
