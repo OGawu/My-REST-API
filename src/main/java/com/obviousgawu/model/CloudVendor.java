@@ -11,7 +11,7 @@ public class CloudVendor {
     allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
     generator = "cloudVendor_id_sequence")
-    private String id;
+    private int id;
 
     private String name;
     private String address;
@@ -20,18 +20,18 @@ public class CloudVendor {
     public CloudVendor() {
     }
 
-    public CloudVendor(String id, String name, String address, String number) {
+    public CloudVendor(int id, String name, String address, String number) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.number = number;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
